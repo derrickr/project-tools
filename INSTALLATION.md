@@ -62,7 +62,7 @@ Although Linux command line experience is preferred, the basic commands required
 
 ## 4.	Clone project from git
 
-    git clone git@gitlab.com:derrickr/project-tools-laravel.git .
+    git clone git@github.com:derrickr/project-tools.git .
 
 
 ## 5.	Edit .env file for environment
