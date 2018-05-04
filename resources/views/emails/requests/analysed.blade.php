@@ -1,0 +1,1 @@
+The Technical Analysis of WorkRequest #{{ $request->req_no }} has been carried out and now requires you to complete your Costing / Scheduling sections.

@@ -1,0 +1,1 @@
+Please review WorkRequest #{{ $request->req_no }} and complete your required Technical Anaylsis / Costing / Scheduling sections.

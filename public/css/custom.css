@@ -1,0 +1,193 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 28, 2017, 6:53:12 PM
+    Author     : kistha
+*/
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+
+/*general*/
+* {font-family:Cabin, Verdana, Arial, Helvetica, sans-serif;}
+text {font-family: Cabin !important; }
+.logo-lg img{
+    width: 25%;
+    margin-right: 15px;
+}
+.logo-mini img{
+    width: 100%;
+}
+.login-page, .register-page{
+    background: url(../images/bg.jpg);
+    background-size: cover;
+    background-color: #ccc;
+    background-blend-mode: screen;
+}
+.login-logo img, .register-logo img{
+    width: 20%;
+    float: none;
+}
+ul.two-cols{
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    list-style: none;
+}
+.two-cols li label{
+    font-weight: normal;
+}
+
+.two-cols li input{
+    margin: auto;
+}
+.tr-hover{
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+table.dataTable thead > tr > th a {
+    color: #fff;
+}
+table.dataTable thead > tr > th.headings{
+    background-color: #3c8dbc;
+    border-right-color: #fff;
+    color: #fff;
+}
+table.table-bordered.dataTable tr.even{
+    background-color: #f0f8ff;
+}
+table.table-bordered.dataTable tr:hover{
+    background-color: #ecf0f5;
+}
+.label-info2 {
+    background-color: #a52a2a;
+}
+.header-label {
+    display: inline;
+    padding: .2em .6em .3em;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+div#actionkey{
+        position: absolute;
+    top: 5px;
+    left: 150px;
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 0.7em;
+    display: inline-block;
+    color: #333;
+    cursor: default;
+}
+div#actionkeys{
+     position: absolute; top: 2px; left: 230px;
+}
+table.dataTable{
+    font-size: 16px;
+    padding: 0.5em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-radius: 10px;
+}
+table.dataTable tr >td{
+    border:1px solid #f4f4f4;
+}
+table.dataTable tr >td span.label{
+    font-size: 16px;
+    font-weight: normal;
+    width: 90%;
+    float: left;
+    margin-left: 5%;
+}
+table.table-bordered td:last-child{
+    border-right-width: thin;
+}
+.user-panel > .info{
+    position: initial;
+}
+.user-info p{
+    margin: 0;
+}
+.user-info{
+    color: #fff
+}
+.label-edit-form{
+    width: 100%;
+    background-color: #eeeeee;
+    padding: 5px 10px;
+    border: 1px solid;
+    font-weight: normal;
+}
+.datepicker table tr td.disabled, .datepicker table tr td.disabled:hover{
+    color:#d8d8d8;
+}
+.comment{
+    font-size: 16px;
+    white-space: pre-wrap;
+    color:#009;
+}
+.comment::first-line{
+    font-size: 12px;
+    color: #666;
+}
+.box-title .label{
+    font-weight: normal;
+    font-size: 100%;
+}
+.row-middle{
+    width: 25em;
+    margin: 0 auto;
+    margin-top:10px
+}
+.row-middle a{
+    padding: 5px;
+    border-radius: 5px;
+}
+textarea#costs{width:100%; resize:none;}
+#requestersHolder, #requestsHolder {text-align:center; display:inline-block;}
+#gantt, #requesters, #requests {display:inline-block; margin:0 0 1em; padding:0; border-radius:1em; border:solid 1em white;}
+.docs-title{background-color:#f0f8ff; font-size: 18px; text-align: center; padding: 7px 10px; margin-top: 0;}
+.docs-table > thead{background-color: #f6f6f6;}
+.docs-table > tbody > tr > td > b{color:#0000ff}
+.label.accepted {background-color: #00B800 !important;}
+.label.analysed{background-color: #00AC00 !important;}
+.label.approved{background-color: #008800 !important;}
+.label.backedout{background-color: #FF0000 !important;}
+.label.backout{background-color: #FF0700 !important;}
+.label.cancelled{background-color: #FF2300 !important;}
+.label.completed{background-color: #007000 !important;}
+.label.costed{background-color: #00A000 !important;}
+.label.failtesting{background-color: #FF1500 !important;}
+.label.fasttrack{background-color: #ccbb00 !important;}
+.label.implemented{background-color: #007C00 !important;}
+.label.moreinfo{background-color: #FF8000 !important;}
+.label.moretime{background-color: #FF2A00 !important;}
+.label.new{background-color: #66cc00 !important;}
+.label.pass{background-color: #007000 !important;}
+.label.rejected{background-color: #FF1C00 !important;}
+.label.reopened{background-color: #FF5500 !important;}
+.label.reworked{background-color: #FF0E00 !important;}
+.label.scheduled{background-color: #009400 !important;}
+.skin-blue .user-panel > .info, .skin-blue .user-panel > .info > a {
+    height:50px;
+}
+span.descrete{
+    font-size: 14px;
+    color: #999;
+    opacity: 0.8;
+}
+span.select2-selection.select2-selection--single.input-sm {
+    height: 30px !important;
+    padding: 5px 15px !important;
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+    border-radius: 3px !important;
+}
+.select2-container--default .input-sm .select2-selection__arrow b{
+    top: 40%;
+}

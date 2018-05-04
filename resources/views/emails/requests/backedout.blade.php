@@ -1,0 +1,1 @@
+This notification is for information purposes only, to let you know that Back Out of WorkRequest #{{ $request->req_no }} has been Completed.

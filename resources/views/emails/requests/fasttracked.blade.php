@@ -1,0 +1,1 @@
+This notification is for information purposes only, as Fast Tracked WorkRequests are meant for small pieces of work, not justifying the full WorkRequest process.

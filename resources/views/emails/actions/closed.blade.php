@@ -1,0 +1,1 @@
+Confirming that <a href="{{url('/')}}/action?id={{ $action->id }}">action: {{ $action->id }}</a> was completed on {{ $action->completed }} and is now closed.

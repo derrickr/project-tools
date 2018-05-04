@@ -1,0 +1,29 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// theme
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css);
+@import "public/theme/plugins/daterangepicker/daterangepicker.scss";
+@import "public/theme/plugins/datepicker/datepicker.scss";
+@import "public/theme/plugins/morris/morris.scss";
+@import "public/theme/plugins/signature/signature-pad.scss";
+@import "public/theme/plugins/select2/scss/core";
+@import "public/theme/plugins/bootstrap-datetimepicker/sass/bootstrap-datetimepicker-build";
+@import "public/theme/plugins/datatables/scss/datatables";
+@import "public/theme/plugins/form-validation/formValidation.min";
+@import "public/theme/css/_AdminLTE";
+@import "public/theme/css/_AdminLTEdig";
+@import "public/theme/css/skins/_all-skins";
+@import "public/theme/css/_blue";
+@import "public/css/_custom";
+
+

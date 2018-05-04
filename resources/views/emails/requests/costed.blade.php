@@ -1,0 +1,1 @@
+WorkRequest #{{ $request->req_no }} has been Costed and now requires Scheduling.

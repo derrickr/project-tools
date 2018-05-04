@@ -1,0 +1,1 @@
+Please review the New WorkRequest #{{ $request->req_no }}. If in agreement, please Accept for onward technical review at your earlist convenience

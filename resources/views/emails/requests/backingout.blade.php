@@ -1,0 +1,1 @@
+This notification is for information purposes only, to inform you that WorkRequest #{{ $request->req_no }} is being Backed Out.

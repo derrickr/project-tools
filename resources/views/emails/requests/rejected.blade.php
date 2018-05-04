@@ -1,0 +1,1 @@
+This notification is for information purposes only, to let you know that WorkRequest #{{ $request->req_no }} has been Rejected.

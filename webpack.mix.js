@@ -1,0 +1,31 @@
+let mix = require('laravel-mix').mix;
+mix.js('public/theme/js/uncompile.js','public/theme/js/compile.js')
+mix.combine([
+    'public/theme/plugins/jQuery/jquery-2.2.3.min.js',
+'public/theme/plugins/jQueryUI/jquery-ui.min.js',
+'public/theme/bootstrap/js/bootstrap.min.js',
+'public/theme/js/underscore-min.js',
+'public/theme/plugins/form-validation/formValidation.min.js',
+'public/theme/plugins/form-validation/bootstrap.min.js',
+'public/theme/plugins/select2/select2.full.min.js',
+'public/theme/plugins/mask/jquery.mask.min.js',
+'public/theme/js/moment.js',
+'public/theme/plugins/iCheck/icheck.js',
+'public/theme/plugins/datepicker/bootstrap-datepicker.min.js',
+'public/theme/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js',
+'public/theme/plugins/daterangepicker/daterangepicker.js',
+'public/theme/plugins/slimScroll/jquery.slimscroll.min.js',
+'public/theme/plugins/morris/raphael-min.js',
+'public/theme/plugins/morris/morris.js',
+'public/theme/plugins/jquery.prefix-input/jquery.prefix-input.js',
+'public/theme/js/typeahead.bundle.js',
+'public/theme/js/app.min.js',
+'public/theme/js/common.js',
+'public/theme/js/advanced_filter.js',
+'public/theme/js/actions.js',
+'public/theme/js/users.js',
+'public/theme/js/requests.js',
+'public/theme/js/resources.js',
+'public/theme/js/compile.js',
+], 'public/js/app.js').minify('public/js/app.js');
+mix.sass('resources/assets/sass/app.scss', 'public/css');

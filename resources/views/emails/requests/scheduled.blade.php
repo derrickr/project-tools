@@ -1,0 +1,1 @@
+Please review the WorkRequest #{{ $request->req_no }}. If in agreement, please Approve for onward implemenation.
