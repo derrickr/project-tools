@@ -32,5 +32,6 @@ public/js/app.min.js
 public/mix-manifest.json
 public/images/profile_images/*
 
-#GitHub issue templates
+# GitHub issue templates
 .github/
+.github/ISSUE_TEMPLATE/
