@@ -62,6 +62,8 @@ Although Linux command line experience is preferred, the basic commands required
 
 ## 4.	Clone project from git
 
+    cd /var/www/html/
+    
     git clone git@github.com:derrickr/project-tools.git .
 
 
