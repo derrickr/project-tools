@@ -25,6 +25,8 @@ Although Linux command line experience is preferred, the basic commands required
 
 * LAMP stack already install and tested.
 
+* At least 2GB RAM, for install.
+
 * mysql database and associated user account.
 
 * Web server service running under **/var/www/html/**
@@ -48,8 +50,6 @@ Although Linux command line experience is preferred, the basic commands required
 
 
 ## 3.	Install NodeJs on server
-
-    cd /var/www/html
 
     curl -sL https://deb.nodesource.com/setup_8.x | bash -
 
@@ -83,21 +83,18 @@ Within your installation's directory (e.g. **/var/www/html/**) run, as root:
 
 As **non-root** user, run:
 
-    cd /var/www/html/
-
-    sudo chown -R userName:userGroup *
-    sudo chown -R userName:userGroup .*
+    sudo chown -R derrick:derrick /var/www/html/
 
     composer update
 
-*note: replace username and group as required for your implementation
+*note: Replace derrick:derrick (username and group) as required for your implementation!
 
 
 ## 8.	Supervisor
 
 Supervisor is required to run Laravel's artisan queue to send email 
 
-    apt-get install supervisor
+    sudo apt-get install supervisor
 
 Create: `/etc/supervisor/conf.d/laravelMailer.conf` with the following:
 
@@ -146,6 +143,8 @@ This creates user:
 
 ## 10.	Update Apache paths & permissions
 
+Now we set the Laravel public path in Apache.
+
 Update: `/etc/apache2/sites-available/000-default.conf` with the following: 
 
     DocumentRoot /var/www/html/public
@@ -165,9 +164,4 @@ Next, change the owner and group of the installed directory back to `www-data`
 
 Finally, restart Apache:
 
-    systemctl restart apache2
-
-
-----
-
-Please use the [SourceForge Tickets system](https://sourceforge.net/p/project-tools/tickets/) for issues or support.
+    sudo systemctl restart apache2
