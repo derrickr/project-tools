@@ -36,7 +36,17 @@ Although Linux command line experience is preferred, the basic commands required
 * The following steps 2 - 6, are all run as root
 
 
-## 2.	Install Composer
+## 2.	Ensure adequate RAM for Installation
+
+    free -h
+
+If there is less than 2GB of RAM, you can temporarily increase memory requirements through use of a swap space:
+
+    dd if=/dev/zero of=/extraswap bs=1M count=2048 && mkswap /extraswap && swapon /extraswap && free -h
+
+
+
+## 3.	Install Composer
 
 [Reference: https://getcomposer.org/download/](https://getcomposer.org/download/)
 
@@ -49,32 +59,45 @@ Although Linux command line experience is preferred, the basic commands required
 *note: above hash correct as of 1 May 2018
 
 
-## 3.	Install NodeJs on server
+## 4.	Install NodeJs on server
+
+Initial development was carried out with node 6, but also been sucessfully tested on node 8 and node 10.
+
+To install Node 10:
+
+    curl -sL https://deb.nodesource.com/setup_10.x | bash -
+
+    apt-get install -y nodejs
+
+If the above (node 10 version) causes issues, try an install of Node 8:
 
     curl -sL https://deb.nodesource.com/setup_8.x | bash -
 
     apt-get install -y nodejs
 
-*note: Initial development was carried out with node 6. If the above (node 8 version) causes issues, please run the following instead:
+
+Alternatively, if either of the above cause issues, please revert to version 6 as originally developed upon:
 
     curl -sL https://deb.nodesource.com/setup_6.x | bash -
 
+    apt-get install -y nodejs
 
-## 4.	Clone project from git
+
+## 5.	Clone project from git
 
     cd /var/www/html/
     
     git clone git@github.com:derrickr/project-tools.git .
 
 
-## 5.	Edit .env file for environment
+## 6.	Edit .env file for environment
 
 Basic Laravel knowledge is required to configure your **.env** file.
 
 Please refer to the **ENV.md** file for instructions regarding how to configure your **.env** file
 
 
-## 6.	Install Node Package Manager
+## 7.	Install Node Package Manager
 
 Within your installation's directory (e.g. **/var/www/html/**) run, as root:
 
@@ -87,7 +110,7 @@ Within your installation's directory (e.g. **/var/www/html/**) run, as root:
     sudo rm /tmp/libpng12.deb
 
 
-## 7.	Composer update
+## 8.	Composer update
 
 As **non-root** user, run:
 
@@ -98,7 +121,7 @@ As **non-root** user, run:
 *note: Replace derrick:derrick (username and group) as required for your implementation!
 
 
-## 8.	Supervisor
+## 9.	Supervisor
 
 Supervisor is required to run Laravel's artisan queue to send email 
 
@@ -135,7 +158,7 @@ At which point, you can now quit supervisorctl:
 The `php artisan queue` should now be running as a process, in the background. You can check this by running: `ps -aux | grep 'queue'`
 
 
-## 9.	Database Migration & Seeding
+## 10.	Database Migration & Seeding
 
 Still within **/var/www/html/**, run the following:
 
@@ -149,7 +172,7 @@ This creates user:
 * password: Admin@2018
 
 
-## 10.	Update Apache paths & permissions
+## 11.	Update Apache paths & permissions
 
 Now we set the Laravel public path in Apache.
 
