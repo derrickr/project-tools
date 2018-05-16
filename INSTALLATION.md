@@ -103,7 +103,9 @@ Within your installation's directory (e.g. **/var/www/html/**) run, as root:
 
     npm install && npm run prod
 
-*note: On Ubuntu 18.04 LTS I found an issue with the 'npm install' failing due to 'pngquant', which I resolved by following the answer on [this stackoverflow article](https://stackoverflow.com/questions/49308545/error-with-npm-update-pngquant-binary-does-not-seem-to-work-correctly):
+*Please ensure you have adequate memory available - refer to step 2 above
+
+*An issue with 'npm install' failing due to 'pngquant' was found on Ubuntu 18.04 LTS, which was resolved by following the answer on [this stackoverflow article](https://stackoverflow.com/questions/49308545/error-with-npm-update-pngquant-binary-does-not-seem-to-work-correctly):
 
     sudo wget -q -O /tmp/libpng12.deb http://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb
     sudo dpkg -i /tmp/libpng12.deb
@@ -114,7 +116,7 @@ Within your installation's directory (e.g. **/var/www/html/**) run, as root:
 
 As **non-root** user, run:
 
-    sudo chown -R derrick:derrick /var/www/html/
+    sudo chown -R derrick:derrick /var/www/
 
     composer update
 
@@ -191,7 +193,7 @@ Update: `/etc/apache2/sites-available/000-default.conf` with the following:
 
 Next, change the owner and group of the installed directory back to `www-data`
 
-    sudo chown -R www-data:www-data /var/www/html/
+    sudo chown -R www-data:www-data /var/www/
 
 Finally, restart Apache:
 
